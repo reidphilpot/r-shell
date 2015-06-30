@@ -16,7 +16,7 @@ Define your routes in `routes.json`
 }
 ```
 
-This dictionary maps a route to a named module. Module names are defined in `paths.json`.
+This dictionary maps a route to a named module. Module names are defined in `requires.json`.
 
 ### Define modules
 
