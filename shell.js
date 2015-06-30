@@ -9,7 +9,7 @@ define(
     var router = new Backbone.Router()
       , scope = document.getElementById('root')
 
-    $.getJSON('requires.json', startRouter)
+    $.getJSON('routes.json', startRouter)
 
     function startRouter (routes) {
       _.pairs(routes).forEach(function (route) {
