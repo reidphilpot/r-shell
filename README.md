@@ -10,13 +10,12 @@ Define your routes in `routes.json`
 
 ```javascript
 {
-  "posts(/:id)":          "posts/posts"
-, "search/:query":        "search/search"
+  "search/:query":        "search/search"
 , "search/:query/p:page": "search/search" 
 }
 ```
 
-This dictionary maps a route to a named module. Module names are defined in `requires.json`.
+This dictionary maps a route to a named module. Module names are defined in require config.
 
 ### Define modules
 
@@ -24,10 +23,17 @@ Your module must return a function that will be called with the dynamic segments
 
 ```javascript
 define(
-  function () {
+  'search/search'
+, function () {
     return function (query, page) {
-      this.innerHTML = "Hello from search.<br><br>query:" + query + "<br>page:" + page
+      this.innerHTML = "Hello from 'search/search'.<br><br>query: " + query + "<br>page: " + page
     } 
   } 
 )
+```
+
+### Load module
+
+```
+http://localhost/#search/foo?p=1
 ```

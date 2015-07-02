@@ -1,7 +1,8 @@
 define(
-  function () {
+  'search/search'
+, function () {
     return function (query, page) {
-      this.innerHTML = "Hello from search.<br><br>query:" + query + "<br>page:" + page
+      this.innerHTML = "Hello from 'search/search'.<br><br>query: " + query + "<br>page: " + page
     } 
   } 
 )

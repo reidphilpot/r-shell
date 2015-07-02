@@ -1,5 +1,3 @@
 {
-  "posts(/:id)":          "posts/posts"
-, "search/:query":        "search/search"
-, "search/:query/p:page": "search/search" 
+  "search/:query(?page=:page)": "search/search" 
 }

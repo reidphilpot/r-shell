@@ -2,25 +2,22 @@ define(
   [ 'require'
   , 'backbone'
   , 'underscore'
-  , 'jquery'
+  , 'text!./routes.json'
   ]
-  , function (require, Backbone, _, $) {
+  , function (require, Backbone, _, routesJson) {
   
     var router = new Backbone.Router()
       , scope = document.getElementById('root')
+      , routes = _.pairs(JSON.parse(routesJson))
 
-    $.getJSON('routes.json', startRouter)
+    routes.forEach(function (route) {
+      router.route.apply(router, route)  
+    }) 
+  
+    router.on('route', loadModule)
 
-    function startRouter (routes) {
-      _.pairs(routes).forEach(function (route) {
-        router.route.apply(router, route)  
-      }) 
-    
-      router.on('route', loadModule)
-
-      // start listening to state changes
-      Backbone.history.start() 
-    }
+    // start listening to state changes
+    Backbone.history.start() 
 
     function loadModule(name, params) {
       require([name], callModule.bind(scope, params))     
