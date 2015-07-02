@@ -10,12 +10,11 @@ Define your routes in `routes.json`
 
 ```javascript
 {
-  "search/:query":        "search/search"
-, "search/:query/p:page": "search/search" 
+  "search/:query(?page=:page)": "search/search" 
 }
 ```
 
-This dictionary maps a route to a named module. Module names are defined in require config.
+This dictionary maps a route to a named module.
 
 ### Define modules
 
