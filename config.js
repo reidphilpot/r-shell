@@ -14,10 +14,10 @@ define(
       }
     }
   , "paths": {
-      "jquery": "./node_modules/jquery/dist/jquery.min"
-    , "backbone": "./node_modules/backbone/backbone-min"
-    , "underscore": "./node_modules/backbone/node_modules/underscore/underscore-min"
-    , "text": "./node_modules/requirejs-text/text"
+      "jquery": "./bower_components/jquery/dist/jquery.min"
+    , "backbone": "./bower_components/backbone/backbone-min"
+    , "underscore": "./bower_components/underscore/underscore-min"
+    , "text": "./bower_components/requirejs-text/text"
     , "search/search": "./search"
    }
   }

@@ -17,7 +17,9 @@ define(
     router.on('route', loadModule)
 
     // start listening to state changes
-    Backbone.history.start() 
+    Backbone.history.start()
+
+    return router
 
     function loadModule(name, params) {
       require([name], callModule.bind(scope, params))     

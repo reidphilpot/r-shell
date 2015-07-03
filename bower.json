@@ -1,0 +1,27 @@
+{
+  "name": "r-shell",
+  "version": "0.0.0",
+  "homepage": "https://github.com/reidphilpot/r-shell",
+  "authors": [
+    "Reid Philpot <reidphilpot@gmail.com>"
+  ],
+  "description": "A shell with a lightweight router that maps requests to AMD modules",
+  "main": "main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.18",
+    "backbone": "~1.2.1",
+    "requirejs-text": "~2.0.14",
+    "jquery": "~2.1.4"
+  }
+}

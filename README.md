@@ -34,5 +34,5 @@ define(
 ### Load module
 
 ```
-http://localhost/#search/foo?p=1
+http://localhost/#search/foo?page=1
 ```
